@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="pensplace" constructor="MDADarkModeDetector" version="1.0.2" display-name-key="MDADarkModeDetector" description-key="Outputs true if the MDA app is in Dark Mode, false otherwise" control-type="standard">
+    <property name="isDarkMode" display-name-key="Is Dark Mode" description-key="Outputs true if the MDA app is in Dark Mode, false otherwise" of-type="SingleLine.Text" usage="output" required="false" />
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+    <feature-usage>
+      <uses-feature name="utility" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
