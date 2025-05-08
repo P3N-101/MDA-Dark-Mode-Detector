@@ -18,8 +18,7 @@
   <PropertyGroup>
     <SolutionName>MDADarkModeDetector</SolutionName>
     <SolutionVersion>1.0.0.0</SolutionVersion>
-    <CustomVersion>1.0.0</CustomVersion>
-    <SolutionPackageFilename>MDADarkModeDetector_$(CustomVersion).zip</SolutionPackageFilename>
+    <SolutionPackageFilename>MDADarkModeDetector_$(SolutionVersion).zip</SolutionPackageFilename>
   </PropertyGroup>
   <!-- 
     Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both)

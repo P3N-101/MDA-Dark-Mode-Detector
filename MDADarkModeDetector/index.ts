@@ -12,7 +12,7 @@ export class MDADarkModeDetector implements ComponentFramework.StandardControl<I
     ): void {
         this.notifyOutputChanged = notifyOutputChanged;
         this.isDarkMode = this.detectDarkMode(context);
-        console.log("Init: isDarkMode =", this.isDarkMode, "fluentDesignLanguage =", context.fluentDesignLanguage);
+        //console.log("Init: isDarkMode =", this.isDarkMode, "fluentDesignLanguage =", context.fluentDesignLanguage);
     }
 
     public updateView(context: ComponentFramework.Context<IInputs>): void {
@@ -28,7 +28,7 @@ export class MDADarkModeDetector implements ComponentFramework.StandardControl<I
     private detectDarkMode(context: ComponentFramework.Context<IInputs>): boolean {
         // Try fluentDesignLanguage first
         if (context.fluentDesignLanguage?.isDarkTheme !== undefined) {
-            console.log("DetectDarkMode: Using fluentDesignLanguage.isDarkTheme =", context.fluentDesignLanguage.isDarkTheme);
+           // console.log("DetectDarkMode: Using fluentDesignLanguage.isDarkTheme =", context.fluentDesignLanguage.isDarkTheme);
             return context.fluentDesignLanguage.isDarkTheme;
         }
 
@@ -37,7 +37,7 @@ export class MDADarkModeDetector implements ComponentFramework.StandardControl<I
         if (targetElement) {
             const computedStyle = getComputedStyle(targetElement);
             const backgroundColor = computedStyle.backgroundColor;
-            console.log("DetectDarkMode: backgroundColor =", backgroundColor);
+           // console.log("DetectDarkMode: backgroundColor =", backgroundColor);
 
             // Check for Dark Mode (rgb(10,10,10)) or Light Mode (rgb(240,240,240))
             if (backgroundColor === "rgb(10, 10, 10)") {
@@ -46,16 +46,16 @@ export class MDADarkModeDetector implements ComponentFramework.StandardControl<I
                 return false;
             }
         } else {
-            console.log("DetectDarkMode: Target element (#id-30) not found");
+           // console.log("DetectDarkMode: Target element (#id-30) not found");
         }
 
         // Default to false if no reliable detection
-        console.log("DetectDarkMode: Defaulting to false");
+        //console.log("DetectDarkMode: Defaulting to false");
         return false;
     }
 
     public getOutputs(): IOutputs {
-        console.log("getOutputs: isDarkMode =", this.isDarkMode);
+        //console.log("getOutputs: isDarkMode =", this.isDarkMode);
         return {
             isDarkMode: this.isDarkMode.toString()
         };
