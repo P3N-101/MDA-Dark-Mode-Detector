@@ -15,7 +15,12 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <SolutionRootPath>src</SolutionRootPath>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <SolutionName>MDADarkModeDetector</SolutionName>
+    <SolutionVersion>1.0.0.0</SolutionVersion>
+    <CustomVersion>1.0.0</CustomVersion>
+    <SolutionPackageFilename>MDADarkModeDetector_$(CustomVersion).zip</SolutionPackageFilename>
+  </PropertyGroup>
   <!-- 
     Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both)
     Solution Localization Control, if you want to enabled localization of your solution, un-comment SolutionPackageEnableLocalization and set the value to true. - Requires use of -loc flag on Solution Clone or Sync
